@@ -1,313 +1,105 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-neon-void">
-    <meta name="description" content="망원 셔츠룸 초보자 가이드. 리얼 UGC 리뷰와 방문 꿀팁, 가격대, 예약 방법까지 한번에! 오늘밤 망원에서 만나요! 전화문의 010-6279-0862">
-    <meta name="keywords" content="망원 셔츠룸 가이드, 망원 셔츠룸 초보, 망원 셔츠룸 예약, 망원 셔츠룸 가격, 망원 셔츠룸 후기">
-    <link rel="canonical" href="https://t3b05-mw-shirts-list.vercel.app/blog">
-    <meta property="og:title" content="망원 셔츠룸 가이드 bro! 첫 방문자를 위한 꿀팁 대방출">
-    <meta property="og:description" content="망원 셔츠룸 처음 가는 사람? 걱정 마. 여기 다 있다. 리얼 UGC 리뷰와 함께하는 완벽 가이드. 오늘밤 망원에서 만나요!">
-    <title>블로그 · 망원 셔츠룸 모음 bro! neon-void 스트릿 브루탈리스트</title>
-    <style>
-        /* ---------- RESET ---------- */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-        body {
-            font-family: 'Inter', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
-            background: #0b0b0b;
-            color: #e0e0e0;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-        /* ---------- TYPOGRAPHY RAW ---------- */
-        h1, h2, h3, h4 {
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            text-transform: uppercase;
-            color: #00f7ff;
-            text-shadow: 0 0 6px rgba(0, 247, 255, 0.4);
-        }
-        h1 {
-            font-size: 2.8rem;
-            line-height: 1.1;
-            margin-bottom: 0.75rem;
-        }
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            border-left: 6px solid #ff007f;
-            padding-left: 0.75rem;
-        }
-        h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            color: #ffa600;
-            text-shadow: 0 0 4px rgba(255, 166, 0, 0.5);
-        }
-        /* ---------- CONTAINER / SPACE ---------- */
-        header, nav, main, section, footer {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.5rem 1rem;
-        }
-        section + section {
-            margin-top: 3rem;
-            border-top: 1px solid #222;
-            padding-top: 3rem;
-        }
-        /* ---------- NAV 및 헤더 ---------- */
-        nav {
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #111;
-            border: 2px solid #00f7ff;
-            box-shadow: 0 0 12px rgba(0, 247, 255, 0.3);
-            padding: 0.75rem 1.5rem;
-            margin-bottom: 2rem;
-        }
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: 900;
-            letter-spacing: -0.04em;
-            color: #ff007f;
-            text-transform: uppercase;
-            text-decoration: none;
-            text-shadow: 0 0 8px rgba(255, 0, 127, 0.6);
-        }
-        nav .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        nav .nav-links li a {
-            color: #ccc;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            padding: 0.3rem 0;
-            border-bottom: 2px solid transparent;
-            transition: all 0.2s;
-        }
-        nav .nav-links li a:hover,
-        nav .nav-links li a.active {
-            color: #00f7ff;
-            border-bottom-color: #00f7ff;
-            text-shadow: 0 0 6px rgba(0, 247, 255, 0.5);
-        }
-        /* 햄버거 메뉴 (모바일) */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-            background: none;
-            border: none;
-            padding: 4px;
-        }
-        .hamburger span {
-            display: block;
-            width: 28px;
-            height: 3px;
-            background: #00f7ff;
-            border-radius: 2px;
-            box-shadow: 0 0 4px #00f7ff;
-        }
-        /* ---------- 메인 콘텐츠 (블로그 포스트) ---------- */
-        .blog-post {
-            background: #131313;
-            border: 1px solid #2a2a2a;
-            padding: 2.5rem 2rem;
-            box-shadow: inset 0 0 0 2px #00f7ff33;
-        }
-        .blog-post .meta {
-            display: flex;
-            gap: 1.5rem;
-            font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-        .blog-post .meta span {
-            border-left: 2px solid #ff007f;
-            padding-left: 0.5rem;
-        }
-        .blog-post p {
-            margin-bottom: 1.2rem;
-            font-size: 1.05rem;
-            color: #d0d0d0;
-        }
-        .blog-post .highlight-box {
-            background: #1c1c1c;
-            border-left: 6px solid #ffa600;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            font-weight: 500;
-            box-shadow: 0 0 8px rgba(255, 166, 0, 0.15);
-        }
-        .blog-post .highlight-box strong {
-            color: #ffa600;
-        }
-        .blog-post ul {
-            margin: 1rem 0 1.5rem 1.5rem;
-            list-style: square;
-        }
-        .blog-post ul li {
-            margin-bottom: 0.4rem;
-            color: #c0c0c0;
-        }
-        .blog-post .cta-inline {
-            background: #0f0f0f;
-            border: 2px dashed #00f7ff;
-            padding: 1.5rem;
-            text-align: center;
-            margin: 2rem 0 0;
-        }
-        .blog-post .cta-inline a {
-            color: #00f7ff;
-            font-weight: 800;
-            font-size: 1.2rem;
-            text-decoration: none;
-            border-bottom: 2px solid #00f7ff;
-        }
-        .blog-post .cta-inline a:hover {
-            color: #ff007f;
-            border-bottom-color: #ff007f;
-        }
-        /* ---------- FOOTER ---------- */
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            border-top: 2px solid #00f7ff;
-            margin-top: 4rem;
-            font-size: 0.85rem;
-            color: #666;
-            text-transform: uppercase;
-        }
-        footer a {
-            color: #ffa600;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        /* ---------- TEL 링크 (전화문의) ---------- */
-        .tel-link {
-            display: inline-block;
-            background: #ff007f;
-            color: #0b0b0b;
-            font-weight: 900;
-            padding: 0.5rem 1.2rem;
-            border: none;
-            font-size: 1rem;
-            text-transform: uppercase;
-            text-decoration: none;
-            letter-spacing: 0.1em;
-            box-shadow: 0 0 10px rgba(255, 0, 127, 0.6);
-            transition: all 0.2s;
-        }
-        .tel-link:hover {
-            background: #00f7ff;
-            color: #0b0b0b;
-            box-shadow: 0 0 14px rgba(0, 247, 255, 0.8);
-            transform: scale(1.02);
-        }
-        /* ---------- 반응형 768px ---------- */
-        @media (max-width: 768px) {
-            nav .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: #111;
-                border: 2px solid #00f7ff;
-                padding: 1rem;
-                gap: 1rem;
-            }
-            nav .nav-links.open {
-                display: flex;
-            }
-            .hamburger {
-                display: flex;
-            }
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.5rem; }
-            .blog-post { padding: 1.5rem 1rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>망원 셔츠룸 모음 — 블로그</title>
+  <meta name="description" content="망원 셔츠룸을 선택하기 전 꼭 체크해야 할 조건과 상황별 기준을 정리했습니다. 실제 방문 전 체크리스트와 여러 경우에 맞는 추천 포인트를 한눈에 확인하세요.">
+  <meta name="keywords" content="망원 셔츠룸, 망원 셔츠룸 비교, 셔츠룸 선택 가이드, 망원 패션">
+  <link rel="canonical" href="https://mangwon-review-info.link-hub.org/blog.html">
+  <meta property="og:title" content="망원 셔츠룸 모음 — 블로그">
+  <meta property="og:description" content="망원 셔츠룸을 선택하기 전 꼭 체크해야 할 조건과 상황별 기준을 정리했습니다. 실제 방문 전 체크리스트와 여러 경우에 맞는 추천 포인트를 한눈에 확인하세요.">
+  <meta property="og:url" content="https://mangwon-review-info.link-hub.org/blog.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="망원 셔츠룸 모음 — 블로그">
+  <meta name="twitter:description" content="망원 셔츠룸 선택 시 확인해야 할 체크리스트와 상황별 가이드를 제공합니다.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 네비게이션 (이전 페이지와 동일) -->
-    <nav>
-        <a href="/" class="logo">망원셔츠룸</a>
-        <button class="hamburger" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('open')">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="/">홈</a></li>
-            <li><a href="/list">리스트</a></li>
-            <li><a href="/review">리뷰</a></li>
-            <li><a href="/blog" class="active">블로그</a></li>
-            <li><a href="tel:01062790862">전화문의</a></li>
-        </ul>
+  <header>
+    <nav class="nav-present">
+      <input type="checkbox" id="nav-toggle">
+      <label for="nav-toggle" class="v-hero-1ngj">
+        <span></span>
+      </label>
+      <ul class="nav-menu">
+        <li><a href="/">홈</a></li>
+        <li><a href="/about">소개</a></li>
+        <li><a href="/categories">카테고리</a></li>
+        <li><a href="/contact">연락처</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- 메인 콘텐츠 (블로그 포스트 1편) -->
-    <main>
-        <section>
-            <article class="blog-post">
-                <div class="meta">
-                    <span>2025.03.22</span>
-                    <span>by 망원브로</span>
-                    <span>조회 1,247</span>
-                </div>
-                <h1>망원 셔츠룸 첫 방문?<br>이거 하나면 끝!</h1>
-                <p>야, 형. 오늘은 진짜 꿀팁 들고 왔어.<br>망원에서 셔츠룸 처음 가는 사람들 위해 <strong>필수 체크리스트</strong>랑 <strong>현지인만 아는 꿀팁</strong> 싹 다 풀어줄게.</p>
+  <main>
+    <section class="hero">
+      <h1>망원 셔츠룸 모음 — 선택 가이드</h1>
+      <p>망원 주변에 자리 잡은 다양한 셔츠룸을 비교하고, 본인에게 가장 적합한 공간을 찾는 방법을 제시합니다. 강렬한 스트리트 브루탈리즘 감각을 담아, 기존 틀을 깨는 직관적인 체크리스트를 만나보세요.</p>
+    </section>
 
-                <h2>1. 미리 전화하고 가자</h2>
-                <p>진짜 중요해. 네이버에 '망원 셔츠룸' 검색하면 업소마다 번호 나오잖아?<br>그냥 달려가면 웨이팅 개길 수 있어. 평일 오후 8시 이후는 특히 바쁘니까 <strong>010-6279-0862</strong>로 미리 컨펌 받고 가는 게 젤 좋아.</p>
-                <div class="highlight-box">
-                    <strong>✔ 내가 추천하는 방법</strong><br>
-                    "형님, 지금 가도 돼요? 방 두 개 가능?"<br>
-                    이렇게만 물어봐도 직원분들이 친절하게 알려줘.
-                </div>
+    <section class="content-section">
+      <h2>기본 체크 포인트</h2>
+      <p>첫 번째로 확인해야 할 요소는 <strong>위치 접근성</strong>입니다. 대중교통 정류장과의 거리, 주차 가능 여부, 주변 유동인구 등을 고려해 이동 시간을 최소화하세요.</p>
+      <p>다음은 <strong>인테리어와 분위기</strong>입니다. 스트리트 브루탈리즘 스타일을 선호한다면, 콘크리트와 메탈 소재, 그리고 거친 색채 조합을 갖춘 장소를 찾아보세요. 조명, 좌석 배치, 음악 선택까지 전체적인 분위기가 고객 경험에 큰 영향을 미칩니다.</p>
+    </section>
 
-                <h2>2. 가격대? 너무 비싸게 주지 마</h2>
-                <p>망원 셔츠룸 평균 가격대는 보통 <strong>1시간에 10~15만 원</strong> 사이야.<br>코스나 시스템마다 다르니까 첫 방문이면 <strong>기본 코스</strong>로 시작해. 그리고 꼭 <strong>할인이벤트</strong> 하는 곳 있는지 물어봐. 의외로 많이 해줘.</p>
-                <ul>
-                    <li>기본 셔츠룸 코스: 10~13만 원</li>
-                    <li>스페셜 코스: 15~20만 원 (음료+서비스 포함)</li>
-                    <li>단체 할인 (3인 이상): 1인당 1~2만 원 할인</li>
-                </ul>
+    <section class="content-section">
+      <h2>상황별 셔츠룸 선택 기준</h2>
+      <h3>1. 대규모 인원 모임</h3>
+      <p>10명 이상이 동시에 이용해야 하는 경우, <strong>공간 규모와 좌석 배치</strong>가 핵심입니다. 테이블이 이동 가능한 구조인지, 대형 스크린이나 마이크 시설이 구비돼 있는지 확인하세요.</p>
+      <p>또한, <strong>예약 정책</strong>을 미리 검토해두면 갑작스러운 인원 변동에도 유연하게 대응할 수 있습니다. 사전 예약 시 최소 인원 확보가 가능한지, 초과 인원에 대한 추가 요금이 어떻게 부과되는지도 체크합니다.</p>
 
-                <h2>3. 매너가 곧 실력</h2>
-                <p>셔츠룸에서 가장 중요한 건 <strong>서로 존중</strong>이야. 직원분들한테 예의 바르게 대하면 서비스도 더 좋아져. 나도 초반에 너무 긴장해서 실수했었는데, 한 번 웃고 넘어가니까 오히려 분위기 좋아지더라.<br><br>그리고 팁! <strong>처음 가면 무조건 사장님한테 "잘 부탁드립니다"</strong> 한마디 건네. 그럼 서비스 하나 더 챙겨주는 경우 많아. ㅋㅋ</p>
+      <h3>2. 소규모 데이트 혹은 1:1 미팅</h3>
+      <p>2~4인 용도로는 <strong>프라이버시와 조명</strong>이 중요한 포인트가 됩니다. 조도가 낮고, 파티션이 설치된 공간이 있으면 대화에 집중하기 좋습니다.</p>
+      <p>음료 및 스낵 제공 여부, 친절한 서비스 수준도 평가 기준에 포함됩니다. 특히, 셔츠룸마다 차별화된 안주 메뉴가 있는지 확인해 보세요.</p>
 
-                <h2>4. 내가 직접 가본 곳 추천</h2>
-                <p>요즘 망원에서 핫하다는 곳들 몇 군데 다녀봤어.<br>리뷰 보다는 <strong>직접 발로 뛴 정보</strong>니까 믿어도 돼.</p>
-                <ul>
-                    <li><strong>더블에이 셔츠룸</strong> – 인테리어 깔끔, 직원들 친절, 주차 가능</li>
-                    <li><strong>블랙스완</strong> – 프라이빗한 분위기, VVIP 룸 있음</li>
-                    <li><strong>루체</strong> – 가성비 최고, 단체 손님 많음</li>
-                </ul>
-                <p>자세한 위치랑 후기는 <a href="/list" style="color:#ffa600;">리스트 페이지</a>에서 확인해!</p>
+      <h3>3. 비즈니스 미팅 및 프레젠테이션</h3>
+      <p>비즈니스 목적이라면 <strong>프로젝터 및 화이트보드</strong>와 같은 비주얼 장비가 필수입니다. 장비 사용이 무료인지, 사전에 별도 예약이 필요한지 확인해두세요.</p>
+      <p>또한, 와이파이 속도와 안정성, 전원 콘센트 배치 등 실무에 직접적인 영향을 주는 요소들을 체크리스트에 포함시키면 효율적인 회의를 진행할 수 있습니다.</p>
 
-                <div
+      <h3>4. 야간 파티 및 이벤트</h3>
+      <p>밤 시간대 이용 시 <strong>소음 관리와 영업 종료 시간</strong>을 미리 파악하세요. 일부 셔츠룸은 사운드 시스템을 별도로 대여해야 할 수 있습니다.</p>
+      <p>주류 제공 여부와 주류 이용 정책도 중요한 부분이며, 이벤트 진행 시 필요한 추가 인력(바텐더, DJ 등)의 제공 가능 여부도 확인하십시오.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>방문 전 최종 체크리스트</h2>
+      <p>예약 전 반드시 확인해야 할 항목을 정리했습니다. 각 항목을 체크하면서 사전 준비를 마무리하세요.</p>
+      <ul>
+        <li>위치와 교통편: 대중교통 이용 시 최단 경로 확인</li>
+        <li>인테리어 스타일: 스트리트 브루탈리즘 요소 유무</li>
+        <li>예약 가능 인원 및 정책: 최소·최대 인원, 추가 요금 여부</li>
+        <li>시설 지원: 프로젝터, 마이크, 와이파이, 전원</li>
+        <li>서비스 품질: 직원 친절도, 음료·스낵 제공 여부</li>
+        <li>영업 시간 및 소음 관리: 야간 이용 제한 및 사전 협의</li>
+      </ul>
+      <p>위 체크리스트를 기반으로 사전에 담당자와 연락해 세부 사항을 재확인하면 현장에서 발생할 수 있는 불편을 최소화할 수 있습니다.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>자주 묻는 질문(FAQ)</h2>
+      <h3>Q1. 셔츠룸 이용 시 최소 예약 인원은 어떻게 되나요?</h3>
+      <p>대부분의 셔츠룸은 4인 이상부터 예약이 가능하지만, 공간에 따라 2인부터 이용 가능한 곳도 있습니다. 사전 문의를 통해 정확한 최소 인원을 확인하는 것이 좋습니다.</p>
+
+      <h3>Q2. 주말 예약 시 추가 비용이 발생하나요?</h3>
+      <p>주말 및 야간 이용은 평일 대비 프리미엄 요금이 적용되는 경우가 많습니다. 가격 정책은 셔츠룸마다 다르므로, 예약 전 공식 홈페이지나 전화 문의로 최종 요금을 확인하세요.</p>
+
+      <h3>Q3. 음식·주류 반입이 가능한가요?</h3>
+      <p>일부 셔츠룸은 외부 음식·주류 반입을 제한하고 자체 서비스를 제공합니다. 허용 여부와 추가 비용이 있는지 사전에 확인하는 것이 안전합니다.</p>
+
+      <h3>Q4. 예약 취소 정책은 어떻게 되나요?</h3>
+      <p>취소 시점에 따라 전액 환불 또는 일부 위약금이 부과됩니다. 보통 24시간 이전 취소는 무료이며, 그 이후에는 이용 금액의 50~100%가 차감될 수 있습니다.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>맺음말</h2>
+      <p>망원은 다양한 스타일과 분위기의 셔츠룸이 공존하는 지역입니다. 위에서 제시한 체크 포인트와 상황별 기준을 활용하면, 목적에 맞는 최적의 공간을 선택할 수 있습니다.</p>
+      <p>각 셔츠룸마다 고유의 매력이 있으니, 직접 방문 전 사전 조사를 충분히 진행하고, 필요 시 현장 답사를 통해 최종 판단을 내리길 권장합니다. 강렬한 스트리트 브루탈리즘 감각을 즐기면서도 체계적인 선택 과정을 거친다면, 만족스러운 이용 경험을 보장받을 수 있습니다.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 망원 셔츠룸 가이드. 모든 권리 보유.</p>
+  </footer>
 </body>
 </html>
